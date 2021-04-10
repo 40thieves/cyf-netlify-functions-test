@@ -1,5 +1,7 @@
-[functions]
-  directory = "functions"
+[build]
+  publish = "static"
+  functions = "functions"
+  command = "npm run build"
 
 [[redirects]]
   from = "/endangered"

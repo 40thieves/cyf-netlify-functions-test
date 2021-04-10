@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "API for React assessment",
   "author": "Code Your Future",
+  "scripts": {
+    "build": "mkdir -p static && markdown apidocs.md > static/index.html"
+  },
   "dependencies": {
+    "markdown-to-html": "0.0.13",
     "node-fetch": "^2.6.1"
   }
 }
