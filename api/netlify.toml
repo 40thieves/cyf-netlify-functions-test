@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/sales"
-  to = "/.netlify/functions/sales"
+  from = "/endangered"
+  to = "/.netlify/functions/endangered"
   status = 200
