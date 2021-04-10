@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/sales"
+  to = "/.netlify/functions/sales"
+  status = 200
