@@ -1,6 +1,3 @@
-[functions]
-  directory = "functions"
-
 [[redirects]]
   from = "/endangered"
   to = "/.netlify/functions/endangered"
