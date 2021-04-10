@@ -39,7 +39,7 @@ Ask the trainee to consider loading states and error handling. (There are some s
 
 ### Expected time
 
-Trainees should complete this task in around 30 minutes.
+Trainees should complete this task in around 30 - 45 minutes.
 
 ### Assessment
 
