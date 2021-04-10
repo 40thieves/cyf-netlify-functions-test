@@ -1,5 +1,7 @@
 const fetch = require('node-fetch')
 
+const API_TOKEN = "9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee"
+
 exports.handler = async function() {
   const data = await getEndangeredSpecies()
   return {
@@ -25,13 +27,13 @@ async function getEndangeredSpecies() {
 
 function fetchAllSpecies() {
   return fetchJson(
-    "https://apiv3.iucnredlist.org/api/v3/country/getspecies/gb?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee"
+    `https://apiv3.iucnredlist.org/api/v3/country/getspecies/gb?token=${API_TOKEN}`
   );
 }
 
 async function fetchSpeciesById(id) {
   const data = await fetchJson(
-    `https://apiv3.iucnredlist.org/api/v3/species/id/${id}?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee`
+    `https://apiv3.iucnredlist.org/api/v3/species/id/${id}?token=${API_TOKEN}`
   );
   return data.result[0];
 }
