@@ -1,0 +1,9 @@
+{
+  "name": "endangered-species-api",
+  "version": "1.0.0",
+  "description": "API for React assessment",
+  "author": "Code Your Future",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
