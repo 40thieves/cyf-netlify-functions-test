@@ -111,8 +111,7 @@ The trainee could debug issues which came up:
 
 - (0) With a lot of prompting.
 - (1) With a small amount of prompting.
-- (2) With no prompting.
-- (n/a) No problems needed debugging.
+- (2) With no prompting / No problems needed debugging.
 
 Naming and code structure were:
 
