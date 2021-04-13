@@ -1,6 +1,7 @@
 const fetch = require('node-fetch')
 
-const API_TOKEN = "9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee"
+// Contact ali [at] codeyourfuture [dot] io if there's a problem with the api key
+const API_TOKEN = process.env.API_TOKEN
 
 exports.handler = async function() {
   const data = await getEndangeredSpecies()
