@@ -18,6 +18,8 @@ Use the example data to complete the React app and display the endangered specie
 
 Then modify the app so that it loads data from the API instead.
 
+The API documentation is available at **TODO**.
+
 ### Stretch goals
 
 Ask the trainee to consider loading states and error handling. (There are some styles provided in the CSS).
