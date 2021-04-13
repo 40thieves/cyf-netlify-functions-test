@@ -6,7 +6,7 @@
 
 Roberta works at a zoo and wants to show a list of endangered species in the UK. She has found an API to provide data about the endangered species.
 
-A skeleton React app has been generated for you (using Create React App) here: [https://codesandbox.io/s/react-assessment-starting-point-qmiff](https://codesandbox.io/s/react-assessment-starting-point-qmiff). It includes some example data (in the `fake-endangered-species.json` file) from the API.
+A skeleton React app has been generated for you (using Create React App) here: https://codesandbox.io/s/react-assessment-starting-point-qmiff. It includes some example data (in the `fake-endangered-species.json` file) from the API.
 
 #### Step 1
 
@@ -18,7 +18,7 @@ Use the example data to complete the React app and display the endangered specie
 
 Then modify the app so that it loads data from the API instead.
 
-The API documentation is available at **TODO**.
+The API documentation is available at https://cyf-react-endangered-species.netlify.app/.
 
 ### Stretch goals
 
