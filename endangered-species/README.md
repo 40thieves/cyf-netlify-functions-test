@@ -43,6 +43,88 @@ Ask the trainee to consider loading states and error handling. (There are some s
 
 Trainees should complete this task in around 30 - 45 minutes.
 
+### Solution
+
+```js
+// App.js
+import React, { useState, useEffect } from "react";
+
+import "./styles.css";
+
+import Error from "./Error";
+import Loading from "./Loading";
+import Species from "./Species";
+
+export default function App() {
+  const [status, setStatus] = useState("pending");
+  const [endangeredSpecies, setEndangeredSpecies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://kind-cori-9e0aef.netlify.app/endangered")
+      .then((res) => res.json())
+      .then((data) => {
+        setStatus("success");
+        setEndangeredSpecies(data);
+      })
+      .catch(() => {
+        setStatus("error");
+      });
+  }, []);
+
+  return (
+    <main>
+      <h1 className="title">Endangered Species in the UK</h1>
+      <div className="wrapper">
+        {status === "error" && <Error />}
+        {status === "pending" && <Loading />}
+        {status === "success" && (
+          <div className="grid">
+            {endangeredSpecies.map((species) => (
+              <Species key={species.id} species={species} />
+            ))}
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+
+// Species.js
+import React from "react";
+import UpArrow from "./UpArrow";
+import DownArrow from "./DownArrow";
+
+export default function Species(props) {
+  return (
+    <div className="species">
+      <h3 className="species__common">
+        {props.species.main_common_name || props.species.scientific_name}
+      </h3>
+      <h4 className="species__scientific">{props.species.scientific_name}</h4>
+      {props.species.population_trend === "Increasing" ? (
+        <UpArrow />
+      ) : (
+        <DownArrow />
+      )}
+    </div>
+  );
+}
+
+// Loading.js
+import React from "react";
+
+export default function Loading() {
+  return <div className="loading">Loading...</div>;
+}
+
+// Error,js
+import React from "react";
+
+export default function Error() {
+  return <div className="error">Something went wrong!</div>;
+}
+```
+
 ### Assessment
 
 #### Things to not worry about
